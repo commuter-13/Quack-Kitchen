@@ -1,0 +1,180 @@
+/* 排版：調大小、排列方式 、留白，再做細節 */
+
+/*  所有標籤 */
+* {
+    /* border: 1px solid black; */
+}
+
+header {
+    background: #5F725C;
+    color: azure;
+    text-align: center;
+    padding: 20px 0;
+
+
+}
+
+header h1 {
+    /* 消除文字標籤預設margin  */
+    margin: 0;
+    font-family: monospace;
+}
+
+/* 放置所有內容的容器 */
+.container {
+    /* 設定最大寬度：1280px 1380px 1440px 1920px */
+    max-width: 1280px;
+
+    /* 區塊置中 */
+    /* 對外留白：上下 左右 */
+    margin: 0 auto;
+}
+
+/* 放置所有col的容器 */
+.row {
+    /* border: 3px solid #E8E3B9; */
+
+    /* 讓此元素內的第一層元素橫向排列 */
+    display: flex;
+
+    /* 取消自動縮放 */
+    flex-wrap: wrap;
+
+
+}
+
+/* 一張卡片所在的容器 */
+.col {
+    /* border: 3px solid #4C372D; */
+
+    /* 卡片設定成視窗的1/3 */
+    /* width: 33.3%; */
+
+    /* calc：自動計算設定成視窗1/3 */
+    width: calc(100%/3);
+
+
+    /* 留白：上下 左右 */
+    /* 留白：上 右 下 左 */
+
+    /* paddig 對內留白 / margin 對外留白 */
+    padding: 10px 15px;
+
+
+}
+
+/* 一張卡片 */
+.card {
+    border: 2px solid #5F725C;
+
+    /* 區塊陰影 box-shadow:上下 左右 模糊值 顏色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.424);
+
+    /* 不透明度 opacity */
+    opacity: 1;
+
+    /* 圓角 */
+    border-radius: 25px;
+
+    /* 圓角上方角落，圖片內容溢出 */
+    overflow: hidden;
+
+    /* 漸變 */
+    transition: all .8s ease;
+
+    height: 700px;
+
+}
+
+.card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.424);
+
+    /* 不透明度 opacity */
+    opacity: .8;
+
+    /* 縮放 */
+    transform: scale(.95);
+
+}
+
+/* 卡片圖片 */
+.card-img {
+    /* border: 3px solid #D9B489; */
+
+    /* 填滿 */
+    width: 100%;
+
+    /* 坑 消除空格 */
+    display: block;
+
+    height: 500px;
+
+}
+
+/* 卡片文字區 */
+.card-body {
+    /* border: 3px solid #a1cd43; */
+    padding: 10px;
+    margin: 0;
+    color: #353834;
+
+}
+
+/* 卡片標題 */
+.card-title {
+    /* border: 3px solid #8c64cc; */
+
+    /* 坑 文字標籤的預設樣式：margin */
+    margin: 0;
+    font-size: 30px;
+
+}
+
+/* 滑鼠接觸到card，只有card-title產生改變 */
+.card:hover .card-title {
+    color: rgb(128, 62, 11);
+}
+
+
+/* 卡片內文 */
+.card-text {
+    /* border: 3px solid #6f6b76; */
+
+    /* 坑 文字預設樣式：margin */
+    margin: 0;
+
+}
+
+
+
+/* 卡片分類徽章 */
+.badge {
+    background: #BC3D1C;
+    color: rgb(239, 238, 236);
+    padding: 3px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+
+
+
+/* CSS Media Query */
+/* Mobile : 576px 768px */
+
+@media(max-width:576px) {
+
+    /* 以下選擇器，只在視窗寬度<=700px 才有效 */
+    .col {
+        width: 100%;
+    }
+}
+
+
+@media(min-width:577px) and (max-width:991px) {
+
+    /* 以下的樣式，只在視窗寬度577px~991px才有效 */
+    .col {
+        width: 50%;
+    }
+}
