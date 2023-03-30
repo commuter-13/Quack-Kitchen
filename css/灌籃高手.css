@@ -27,13 +27,13 @@ p {
 }
 
 .img {
-    margin: 10px 0;
+    margin: 13px 0;
     height: 520px;
 }
 
 
 button {
-    background-color: #A83216;
+    background-color: #b2b2b2;
     color: rgb(255, 255, 255);
     width: 150px;
     height: 30px;
@@ -48,6 +48,6 @@ button {
 
 button:hover {
     background-color: #A83216;
-    opacity: calc(.9);
+    opacity: calc(.7);
 
 }
